@@ -1,0 +1,431 @@
+/*colours do the var for colours
+:root {
+color: #21114D; /* Dark purple text 
+}
+*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    line-height: 1.2;
+    background-size: cover;
+  }
+
+  /*to smooth scrolling*/
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust based on navbar height */
+
+  }
+
+  h1, h2 {
+    font-family: "Staatliches", sans-serif;
+    color: #231156; /* Dark purple text */
+  }
+
+  h3, p {
+    font-family: "inter", sans-serif;
+    color: #090514; /* Dark purple text */
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(2px); /* Optional: Adds a soft blur effect */
+  }
+  
+
+  header {
+    position: fixed; /* Keeps the navbar visible when scrolling */
+    top: 10px; /* Slight spacing from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the navbar */
+    width: 70%; /* Adjust the width to be shorter than full screen */
+    height: 8%;
+    max-width: 900px; /* Prevents it from getting too large on big screens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(253, 225, 222, 0.7)); 
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    z-index: 1000; /* Ensures it stays above other elements */
+  }
+  
+  .logo img {
+    height: 50px; /* Adjust logo size */
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 35px;
+  }
+  
+  nav {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .navigation {
+    list-style: none;
+    padding: 30px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Space between menu items */
+    margin-right: 25px;
+  }
+  
+  .navigation li {
+    display: inline;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #21114D; /* Dark purple text */
+    font-family: "inter", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  .navigation a:hover {
+    color: rgb(59, 218, 239);
+    transition: color 0.5s ease;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .navigation {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Main Content */
+  main {
+    padding: 65px;
+  }
+
+  /* Portrait + Presentation */
+  .container1 {
+    display: flex;
+    flex-direction: column; /* Stack portrait and text vertically */
+    align-items: center; /* Center everything horizontally */
+    text-align: center; /* Center text */
+    width: 100%; /* Ensure it spans the width */
+    }
+  
+  .portrait img {
+    width: 700px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing */
+  }
+
+  h1 {
+    font-family: "Staatliches", sans-serif;
+    font-size: 75px;
+    text-transform: uppercase; /* Optional for full caps */
+    line-height: 1;
+    }
+
+  h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1; /*Adjust for spacing */
+  }
+
+  /*separator betweenhero section with the rest + beetles for separation*/
+  .separator {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 550px; /* Smaller height */
+    width: 100%;
+  }
+
+  .beetles {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    height: 100px; /* Smaller height */
+  }
+  
+  /* web project*/
+  h2 {
+    font-size: 70px;
+    margin-top: 140px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+/* Ensure projects stack vertically */
+.projects-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center cards */
+  gap: 40px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Make project cards horizontal inside their row */
+.project-card {
+  background: rgba(253, 235, 233, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%; /* Take most of the width */
+  max-width: 1000px; /* Limit width for better readability */
+  height: 300px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row; /* Make image and text side by side */
+  align-items: center;
+  gap: 20px;
+}
+
+.project-card p {
+  /*margin-left: 20px; to be aligned with the image*/
+  width: 100%; /*Prevents text from being squished */
+}
+
+/* Project Titles */
+.project-card h3 {
+  font-weight: regular;
+  font-size: 24px;
+  color: #21114D;
+  margin-top: 7px;
+  font-family: "Inter", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add space between title and paragraph */
+}
+
+/* Adjust image size to fit side-by-side layout */
+.project-image {
+  width: 50%; /* Reduce width to fit beside text */
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+/* Ensure title and description are stacked */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text inside */
+  flex: 1;
+}
+
+
+/* Description text */
+.project-card p {
+  font-size: 20px;
+  font-weight: regular;
+  color: #322B58;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.hover-bold:hover {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+/* Buttons container */
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 40px;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #8f75d1;
+  color: #322B58;
+  padding: 10px 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 7px 10px rgba(25, 0, 44, 0.237);
+}
+
+.btn:hover {
+  background-color: rgba(59, 218, 239, 0.701);
+  transition: background-color 0.5s ease;
+  color:#322B58;
+}
+ 
+ /* Artistic Projects Section */
+
+/* Ensure title is in the first row */
+.art-projects {
+  font-size: 70px;
+  margin-top: 140px;
+  margin-bottom: 60px;
+  grid-column: 1 / span 2;
+  grid-row: 1; /* Ensures it stays at the top */
+  font-weight: bold;
+}
+
+.art {
+  display: grid;
+  grid-template-columns: 400px 400px; /* Wider columns */
+  grid-template-rows: auto;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* Make sure images keep their rectangular shape */
+.art img {
+  width: 100%; /* Make images fill grid width */
+  height: auto; /* Keeps the natural aspect ratio */
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 10px;
+}
+
+
+/* Move everything down by one row */
+.tomatoSeller {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.farfalle {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.krampu {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.autumnGirl {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.gif {
+  grid-column: 1 / span 2; /* Stretches across both columns */
+  grid-row: 4;
+  object-fit: cover; /* Ensures a balanced fill */
+  border-radius: 10px;
+  width: 100% !important;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/*ABOUT section*/
+
+.about {
+  text-align: center;
+  font-family: 'inter', sans-serif;
+  color: #3D2352;
+  padding: 40px 20px;
+}
+
+/* section title*/
+.about h2 {
+  font-size: 70px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-box {
+  background: #f2e1e1;
+  padding: 40px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: left;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*education - professional xp titles*/
+.about-box h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.about-box ol {
+  list-style-type:disc;
+  padding: 0;
+}
+
+.about-box li {
+  margin-bottom: 8px;
+}
+
+.contact {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact .email {
+  background-color: #f4c095;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.contact .instagram {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
